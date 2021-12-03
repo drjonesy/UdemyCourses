@@ -1,0 +1,68 @@
+<div class="container">
+  <h1>Payment Form</h1>
+
+  <!-- ROW -->
+  <div class="row">
+    <div class="col">
+      <label><strong>Payee Name</strong></label>
+      <input
+        (input)="onChangeName($event.target)"
+        class="form-control"
+        type="text"
+      />
+    </div>
+    <div class="col">
+      <label><strong>Name</strong></label>
+      <div>{{ mName | titlecase }}</div>
+    </div>
+  </div>
+
+  <!-- ROW -->
+  <div class="row">
+    <div class="col">
+      <label><strong>Payment Date</strong></label>
+      <input
+        (input)="onChangeDate($event.target)"
+        class="form-control"
+        type="date"
+      />
+    </div>
+    <div class="col">
+      <label><strong>Payment Date</strong></label>
+      <div>{{ mDate | date: "fullDate" }}</div>
+    </div>
+  </div>
+
+  <!-- ROW -->
+  <div class="row">
+    <div class="col">
+      <label><strong>Payment Amount</strong></label>
+      <input
+        (input)="onChangeAmount($event.target)"
+        class="form-control"
+        type="text"
+      />
+    </div>
+    <div class="col">
+      <label><strong>Payment Amount</strong></label>
+      <div>{{ mAmount | currency }}</div>
+    </div>
+  </div>
+
+  <!-- ROW -->
+  <div class="row">
+    <div class="col">
+      <label><strong>Miles</strong></label>
+      <input
+        (input)="onChangeMiles($event.target)"
+        class="form-control"
+        type="text"
+      />
+    </div>
+    <div class="col">
+      <label><strong>Value</strong></label>
+      <div>{{ mMiles | miles_to: "km" | number: "1.0-2" }}</div>
+    </div>
+  </div>
+  <!-- END CONTAINER -->
+</div>
