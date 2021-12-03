@@ -1,0 +1,16 @@
+<%- include('../partials/header') %> 
+<%- include('../partials/nav') %> 
+<div class="container">
+    <h3>Edit Comment</h3>
+    <form method="POST" action="/comments/<%= c.id %>?_method=PATCH">
+        <div class="mb-3">
+          <label for="comment" class="form-label">Comment</label>
+          <textarea class="form-control" id="comment" name="comment" placeholder="comment"><%= c.comment %> </textarea>
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="/comments" type="button" class="btn btn-warning">Cancel</a> 
+      </form>
+    
+</div>
+<%- include('../partials/footer') %>  

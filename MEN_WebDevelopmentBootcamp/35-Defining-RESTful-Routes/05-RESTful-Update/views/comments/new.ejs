@@ -1,0 +1,19 @@
+<%- include('../partials/header') %> 
+<%- include('../partials/nav') %> 
+    <div class="container">
+        <h3>New Comment</h3>
+        <form method="POST" action="/comments">
+            <div class="mb-3">
+              <label for="username" class="form-label">User</label>
+              <input type="text" class="form-control" id="username" name="username">
+            </div>
+            <div class="mb-3">
+              <label for="comment" class="form-label">Comment</label>
+              <textarea class="form-control" id="comment" name="comment" placeholder="comment"></textarea>
+            </div>
+           
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        <a href="/comments" type="button" class="btn btn-warning mt-3">Cancel</a> 
+    </div>
+<%- include('../partials/footer') %>  

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= subreddit %> </title>
+</head>
+<body>
+    <h1><%= subreddit %> </h1>
+    <!-- conditional ejs -->
+    <% if(subreddit.length % 2 === 0) { %> 
+    <p>Your subreddit string length is: even</p>
+    <% } else { %> 
+    <p>Your subreddit string length is: odd</p>
+    <% } %> 
+
+    <!-- ternary  -->
+    <!-- Does not require if keyword -->
+    <p>The subreddit <%= subreddit %> character length is <%= (subreddit.length % 2 === 0) ? 'EVEN' : 'ODD' %>  </p>
+</body>
+</html>

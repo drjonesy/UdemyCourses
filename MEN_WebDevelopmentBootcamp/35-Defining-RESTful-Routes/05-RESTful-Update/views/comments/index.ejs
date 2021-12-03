@@ -1,0 +1,12 @@
+<%- include('../partials/header') %> 
+<%- include('../partials/nav') %> 
+    <div class="container">
+        <h3>All Comments</h3>
+        <a href="/comments/new" type="button" class="btn btn-secondary mb-3">Add</a>
+        <ul style="list-style-type: none; padding-left: 0;">
+        <% for(const c of comments) { %>
+            <li><%= c.comment %> - <strong><%= c.username %></strong> | <a href="/comments/<%= c.id %>">details</a> | <a href="/comments/<%= c.id %>/edit">edit</a></li>
+        <% } %> 
+        </ul> 
+    </div>
+<%- include('../partials/footer') %>  
