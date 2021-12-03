@@ -1,1 +1,2 @@
-"# UdemyCourses"  git init git add README.md git commit -m "first commit" git branch -M main git remote add origin https://github.com/drjonesy/UdemyCourses.git git push -u origin main
+# Udemy Courses
+Contains Projects completed and working on from Udemy Courses.
